@@ -30,13 +30,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference is that forEach() allows the mutation of the original array, while map() returns a new array of the same size. You have to loop through the entire array using '.map'
+
 2. What is the difference between a function and a method?
+A function is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed. A method is a piece of code that is called by a name that is associated with an object. A method is similar to a function, but is internal to part of a class. The term method is used almost exclusively in object-oriented programming. A function is something that takes a bunch of inputs and returns one or more values. ... A procedure is a function that doesn't return a value.
 
 3. What is closure?
+A closure is a function that has access to its outer function scope even after the outer function has returned. This means a closure can remember and access variables and arguments of its outer function even after the function has finished.
 
 4. Describe the four rules of the 'this' keyword.
 
+  1. Principle 1: Window/Global Object Binding  //'this' is the window
+  2. Principle 2: Implicit Binding //'this' is the object
+  3. Principle 3: New binding //'this' has to do with constructor functions. Whenever a constructor function is used, 'this' refers to the specific
+  instance of the object that is created and returned by the constructor function
+  4. Principle 4: Explicit binding//'this' whenever .apply(), .bind(), or .call() are used 'this' is explicitly defined
+
 5. Why do we need super() in an extended class?
+super() is the equivalent of `call(this, propertyX, propertyY)` but replaces the need for this using ES6
+new syntax. It makes sure that the parent class is called via the child's constructor so as to inherit the characteristics and behaviors of the parent. Traditonally prototypal inheritance was used to extend classes or to make subclasses. The keyword `extend` is needed when creating the subclass and extends the parent class to the subclass in ES6 way.
 
 ## Project Set up
 
